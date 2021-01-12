@@ -1,0 +1,9 @@
+version: '3'
+
+services:
+  123milhas-app:
+    build: .
+    ports:
+      - "80:80"
+    volumes:
+      - ./:/usr/share/nginx
