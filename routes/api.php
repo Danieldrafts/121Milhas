@@ -19,6 +19,6 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::group(['prefix' => '/'], function () {
     Route::get('/', 'HomeController@index');
-    Route::get('/get-flights', 'FlightGroupingController@index');
-    Route::get('/flights/grouping', 'FlightGroupingController@group');
+    Route::get('/flights', 'FlightGroupingController@index');
+    Route::get('/flights/grouping', 'FlightGroupingController@grouping');
 });
