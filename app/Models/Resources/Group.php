@@ -14,6 +14,15 @@ class Group
         $this->uniqueId = uniqid();
     }
 
+    public function getTotalPrice()
+    {
+        if(empty($this->outbound) || empty($this->inbound))
+        {
+            throw new \Exception('Inbound and outbound fields cannot be empty!');
+        }
+
+        $this->totalPrice = $this->inbound->first()->price + $this->outbound->first()->price;
+    }
 }
 
 ?>
