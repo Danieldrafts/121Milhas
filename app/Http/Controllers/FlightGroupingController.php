@@ -35,8 +35,17 @@ class FlightGroupingController extends Controller
 
         $flightGrouping = new FlightGrouping();
 
-        $flightGroups = $flightGrouping->makeGroups($flights);
-        return response($flightGroups, 200);
+        try
+        {
+            $result = $flightGrouping->makeGroups($flights);
+            $status = 200;
+        }catch (\Exception $e)
+        {
+            $result = ['result' => 'error', 'message' => 'Failed to group flights', 'status_code' => '500'];
+            $status = 500;
+        }
+
+        return response($result, $status);
     }
 
 }
