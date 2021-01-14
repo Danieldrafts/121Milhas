@@ -16,9 +16,9 @@
 ### Configurações
 
  O endereço da api utilizada como fonte de dados (http://prova.123milhas.net/) pode ser alterado no arquivo .env:
-    - 123MILHAS_API_ADDRESS
-    - 123MILHAS_API_USERNAME
-    - 123MILHAS_API_PASSWORD
+ - 123MILHAS_API_ADDRESS
+ - 123MILHAS_API_USERNAME
+ - 123MILHAS_API_PASSWORD
 
 
 
